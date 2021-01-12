@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="request_location_permission">Request Location permission at Run time!</string>
 </resources>
