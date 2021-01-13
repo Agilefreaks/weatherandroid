@@ -7,9 +7,17 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import android.Manifest
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
+import android.util.Log
+import android.widget.TextView
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 
 class MainActivity : AppCompatActivity() {
     private var requestValue: Int=1
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -26,7 +34,14 @@ class MainActivity : AppCompatActivity() {
                         arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), requestValue)
             }
         }
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        fusedLocationClient.lastLocation
+                .addOnSuccessListener { location : Location? ->
+                    val textView: TextView = findViewById(R.id.locationTextView)
+                    textView.setText(resources.getString(R.string.location_coordinates,location?.latitude, location?.longitude))
+                }
     }
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>,
                                             grantResults: IntArray) {
         when (requestCode) {
@@ -45,4 +60,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
