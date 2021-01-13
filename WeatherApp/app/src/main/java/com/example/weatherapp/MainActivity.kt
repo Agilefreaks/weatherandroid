@@ -80,10 +80,10 @@ class MainActivity : AppCompatActivity() {
                     val geoCoder=Geocoder(this, Locale.getDefault())
                     val addresses: List<Address>
                     //Code  bellow might work on physical device but throws error on emulator
-                    //addresses= geoCoder.getFromLocation(location.latitude, location.longitude,1)
-                    //val result = addresses[0].locality
-                    //val locationTextView: TextView = findViewById(R.id.locationTextView)
-                    //locationTextView.setText(result)
+                    addresses= geoCoder.getFromLocation(location.latitude, location.longitude,1)
+                    val result = addresses[0].subAdminArea
+                    val locationTextView: TextView = findViewById(R.id.locationTextView)
+                    locationTextView.setText(result)
                 }
             }
     }
