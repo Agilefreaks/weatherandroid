@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                                     Manifest.permission.ACCESS_FINE_LOCATION) ==
                                     PackageManager.PERMISSION_GRANTED)) {
                         Toast.makeText(this, resources.getString(R.string.permission_granted), Toast.LENGTH_SHORT).show()
-                       // getLocation()
                     }
                 } else {
                     Toast.makeText(this, resources.getString(R.string.permission_denied), Toast.LENGTH_SHORT).show()
