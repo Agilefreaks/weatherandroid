@@ -3,5 +3,8 @@
     <string name="request_location_permission">Request Location permission at Run time!</string>
     <string name="permission_granted">Permission Granted</string>
     <string name="permission_denied">Permission Denied</string>
-    <string name="location_coordinates">Your location: (%f : %f)</string>
+    <string name="location_coordinates">(%f : %f)</string>
+    <string name="iconsURL">https://openweathermap.org/img/wn/%s@2x.png</string>
+    <string name="metrics">%s °C</string>
+    <string name="clouds">Humidity: %s%%      Visibility: %s m</string>
 </resources>
