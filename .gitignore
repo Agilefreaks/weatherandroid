@@ -1,0 +1,70 @@
+# IDE
+*.iml
+/.idea/tasks.xml
+/.idea/gradle.xml
+/.idea/dictionaries
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# is relevant to keep the navigation elements in position??
+#.idea/navEditor.xml
+
+# Keystore files
+#*.jks
+#*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+# google-services.json
+
+#/.gitignore
+
+
+# Built files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Generated output
+bin/
+gen/
+out/
+/build
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+
+# Gradle files
+.gradle
+build/
+
+# Local config
+/local.properties
+
+# Log Files
+*.log
+
+#Temp Navigation files.
+.navigation/
+
+#Studio Capture Folders
+captures/
+
+# VCS
+vcs.xml
+
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+lint/reports/
+
+# Android Profiling
+*.hprof
+
